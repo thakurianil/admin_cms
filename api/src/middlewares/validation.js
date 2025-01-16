@@ -78,3 +78,6 @@ export const updateProductValidation = (req, res, next) => {
 
     return validator(req, res, next, schema);
 };
+
+
+//more validation working

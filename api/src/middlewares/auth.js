@@ -46,3 +46,6 @@ export const auth = async (req, res, next) => {
     next(error);
   }
 };
+
+
+//authentication with jwt 
