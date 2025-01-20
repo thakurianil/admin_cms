@@ -131,7 +131,7 @@ Tech Store
 </p>
 
 
-    `, // html body
+    `, 
   };
 
   emailProcessor(obj);
