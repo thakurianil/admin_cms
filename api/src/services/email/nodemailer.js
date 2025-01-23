@@ -136,4 +136,3 @@ Tech Store
 
   emailProcessor(obj);
 };
-//updating it soon
