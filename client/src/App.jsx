@@ -22,51 +22,51 @@ import NewProduct from "./pages/product/NewProduct";
 import EditProduct from "./pages/product/EditProduct";
 
 function App() {
-    // const dispatch = useDispatch();
+    const dispatch = useDispatch();
 
-    // useEffect(() => {
-    //     dispatch(autoLoginAction());
-    // }, []);
-    // return (
-    //     <div>
-    //         <Routes>
-    //             {/* public routes  */}
-    //             <Route path="/" element={<Login />} />
-    //             <Route path="/verify-user" element={<UserVerification />} />
-    //             <Route path="/forget-password" element={<ForgetPassword />} />
+    useEffect(() => {
+        dispatch(autoLoginAction());
+    }, []);
+    return (
+        <div>
+            <Routes>
+                {/* public routes  */}
+                <Route path="/" element={<Login />} />
+                <Route path="/verify-user" element={<UserVerification />} />
+                <Route path="/forget-password" element={<ForgetPassword />} />
 
-    //             {/* private routes  */}
-    //             <Route
-    //                 path="/"
-    //                 element={
-    //                     <Auth>
-    //                         <AdminLayout />
-    //                     </Auth>
-    //                 }
-    //             >
-    //                 <Route path="admin/dashboard" element={<Dashboard />} />
-    //                 <Route path="admin/categories" element={<Categories />} />
-    //                 <Route path="admin/products" element={<Products />} />
-    //                 <Route path="admin/products/new" element={<NewProduct />} />
-    //                 <Route
-    //                     path="admin/products/edit/:_id"
-    //                     element={<EditProduct />}
-    //                 />
-    //                 <Route path="admin/users" element={<User />} />
-    //                 <Route path="admin/orders" element={<Orders />} />
-    //                 <Route path="admin/reviews" element={<Reviews />} />
+                {/* private routes  */}
+                <Route
+                    path="/"
+                    element={
+                        <Auth>
+                            <AdminLayout />
+                        </Auth>
+                    }
+                >
+                    <Route path="admin/dashboard" element={<Dashboard />} />
+                    <Route path="admin/categories" element={<Categories />} />
+                    <Route path="admin/products" element={<Products />} />
+                    <Route path="admin/products/new" element={<NewProduct />} />
+                    <Route
+                        path="admin/products/edit/:_id"
+                        element={<EditProduct />}
+                    />
+                    <Route path="admin/users" element={<User />} />
+                    <Route path="admin/orders" element={<Orders />} />
+                    <Route path="admin/reviews" element={<Reviews />} />
 
-    //                 <Route path="admin/admins" element={<Admin />} />
-    //                 <Route path="admin/new" element={<Register />} />
+                    <Route path="admin/admins" element={<Admin />} />
+                    <Route path="admin/new" element={<Register />} />
 
-    //                 <Route path="admin/profile" element={<Profile />} />
-    //             </Route>
+                    <Route path="admin/profile" element={<Profile />} />
+                </Route>
 
-    //             <Route path="*" element={<h1>404 Page not found!</h1>} />
-    //         </Routes>
-    //         <ToastContainer />
-    //     </div>
-    // );
+                <Route path="*" element={<h1>404 Page not found!</h1>} />
+            </Routes>
+            <ToastContainer />
+        </div>
+    );
 }
 
 export default App;
