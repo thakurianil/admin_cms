@@ -38,6 +38,25 @@ const Login = () => {
     dispatch(loginAdminAction({ email, password }));
   };
 
+  const inputs = [
+    {
+      label: "Email",
+      name: "email",
+      type: "email",
+      required: true,
+      placeholder: "Sam@email.com",
+      forwardRef: emailRef,
+    },
+    {
+      label: "Password",
+      name: "password",
+      type: "password",
+      required: true,
+      placeholder: "*******",
+      forwardRef: passwordRef,
+    },
+  ];
+
   return (
     <div className="d-flex justify-content-center align-items-center vh-100  bg-dark">
       <div className="" style={{ width: "450px" }}>
