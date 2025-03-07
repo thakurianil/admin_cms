@@ -11,7 +11,15 @@ import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const Login = () => {
-  
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const emailRef = useRef("");
+  const passwordRef = useRef("");
+
+  const { user } = useSelector((state) => state.userInfo);
+
   const redirectTo = location?.state?.from?.pathname || "/admin/dashboard";
   useEffect(() => {
     user?._id && navigate(redirectTo);
