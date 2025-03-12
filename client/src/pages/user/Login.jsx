@@ -50,7 +50,7 @@ const Login = () => {
     {
       label: "Password",
       name: "password",
-      type: "password",k
+      type: "password",
       required: true,
       placeholder: "*******",
       forwardRef: passwordRef,
