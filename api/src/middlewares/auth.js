@@ -11,11 +11,7 @@ export const auth = async (req, res, next) => {
       const decoded = await verifyAccessJWT(authorization);
       if (decoded === "jwt expired") message = "jwt expired";
 
-      if (decoded?.email) {
-        const session = await getSession({
-          token: authorization,
-          associate: decoded.email,
-        });
+   
         if (session?._id) {
           const user = await getAUser({ email: decoded.email });
 
